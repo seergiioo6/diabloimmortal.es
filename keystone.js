@@ -42,7 +42,7 @@ keystone.set('locals', {
 
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
-
+keystone.set('cloudinary secure', true);
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
