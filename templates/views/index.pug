@@ -1,0 +1,84 @@
+extends ../layouts/default
+
+mixin post(post)
+	.post(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
+		.post-header
+			div
+				img(src=post._.image.fit(750, 450))
+			div
+				h2: a(href='/'+ post.categories[0].key +'/' + post.slug)= post.title
+				.post-meta
+					span
+						i.fa.fa-clock-o
+						|  #{post._.publishedDate.format('MMMM Do, YYYY')} 
+						a(href="#")  #{post.author.name.first}
+					span
+						if post.categories && post.categories.length
+							| en 
+							each cat, i in post.categories
+								a(href='/' + cat.key)= cat.name
+								if i < post.categories.length - 1
+									| , 
+								else
+									|
+		.post-thumbnail
+			img(src=post._.image.fit(750, 450))
+		p!= post.content.brief
+			
+block content
+	section.hero(style="background-image: url('images/hero.jpg');")
+		.overlay
+		.container
+			.hero-block
+				h2.hero-title Diablo Immortal: El universo de Diablo en tu movil
+				p
+					| Mantente al día de las últimas noticias y guias del videojuego Diablo Immortal
+	section.toolbar.toolbar-links(data-fixed="true")
+		.container
+			h5.m-r-30 Total artículos (#{data.posts.results.length})
+			ul.toolbar-nav.hidden-sm-down
+				each cat in data.categories
+					li(class=filters.category === cat.key ? 'active' : false)
+						a(href='/' + cat.key)= cat.name
+				li(class=!filters.category ? 'active' : false)
+					a(href="/") Reciente
+	section.p-t-40.p-b-60
+		.container
+			.row
+				.col-lg-8
+					each post in data.posts.results
+						+post(post)
+					// post
+					
+						.post-thumbnail
+							#carousel.carousel.slide(data-ride="carousel")
+								ol.carousel-indicators
+									li.active(data-target="#carousel", data-slide-to="0")
+									li(data-target="#carousel", data-slide-to="1")
+								.carousel-inner(role="listbox")
+									.carousel-item.active
+										img(src="images/blog-2.jpg")
+									.carousel-item
+										img(src="images/blog-3.jpg")
+								a.carousel-control-prev(href="#carousel", role="button", data-slide="prev")
+									span.carousel-control-prev-icon(aria-hidden="true")
+									|
+									span.sr-only Previous
+								a.carousel-control-next(href="#carousel", role="button", data-slide="next")
+									span.carousel-control-next-icon(aria-hidden="true")
+									|
+									span.sr-only Next
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elit ante, congue sodales orci ac, ultrices pretium lectus. Maecenas lorem enim, dignissim sed lacus non, feugiat iaculis lorem. Integer eu aliquet diam. Suspendisse fringilla porta justo,
+							| vel tempus risus. Ut et enim sit amet libero fermentum aliquam et ut sem.
+					
+				// sidebar
+				.col-lg-4
+						.widget.widget-newsletter
+							.widget-block(style="background-image: url('images/widget-newsletter.jpg')")
+								.overlay
+								form
+									p Recibe notificaciones cada vez que subamos un nuevo artículo
+									.form-group.input-icon-right
+										input.form-control(type="email", placeholder="Email...")
+									button.btn.btn-primary.btn-block(type="submit") Suscríbete
