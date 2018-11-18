@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/views/post.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/views/post.pug" afterDir="false" />
-    </list>
+    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -64,8 +62,8 @@
       <file leaf-file-name="post.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/post.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="44" />
+            <state relative-caret-position="421">
+              <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -257,12 +255,12 @@
       <workItem from="1541535162372" duration="1117000" />
       <workItem from="1541708344409" duration="115000" />
       <workItem from="1542216084555" duration="11554000" />
-      <workItem from="1542565668220" duration="2802000" />
+      <workItem from="1542565668220" duration="2850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19834000" />
+    <option name="totallyTimeSpent" value="19882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -605,8 +603,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/post.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="44" />
+        <state relative-caret-position="421">
+          <caret line="48" column="43" lean-forward="true" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
         </state>
       </provider>
     </entry>
