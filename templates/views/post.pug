@@ -43,12 +43,12 @@ block content
 			"dateModified": "#{data.post._.publishedDate.format('DD-MM-YYYY')}",
 			"author": {
 				"@type": "Person",
-				"name": "#{data.post.author.name.first}",
-				"logo": "https://www.diabloimmortal.es/images/logo.png"
+				"name": "#{data.post.author.name.first}"
 			},
 			"publisher": {
 				"@type": "Organization",
-				"name": "DiabloImmortal.es"
+				"name": "DiabloImmortal.es",
+				"logo": "https://www.diabloimmortal.es/images/logo.png"
 			},
 			"description": "#{data.post.content.brief}"
 		}
