@@ -11,7 +11,7 @@ exports = module.exports = function (req, res) {
 	locals.filters = {
 		category: req.params.category,
 	};
-	locals.title = 'Diablo Immortal | ' + (req.params.category ? req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1) : 'Noticias, guías y mucho más sobre DiabloImmortal.');
+	locals.title = 'Diablo Immortal | ' + (req.params.category ? req.params.category.charAt(0).toUpperCase() + req.params.category.slice(1) : 'Noticias, guías y mucho más sobre el videojuego Diablo Immortal.');
 	locals.data = {
 		posts: [],
 		categories: [],
