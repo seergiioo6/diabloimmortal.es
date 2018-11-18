@@ -64,8 +64,8 @@
       <file leaf-file-name="post.pug" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/views/post.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+            <state relative-caret-position="398">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -257,12 +257,12 @@
       <workItem from="1541535162372" duration="1117000" />
       <workItem from="1541708344409" duration="115000" />
       <workItem from="1542216084555" duration="11554000" />
-      <workItem from="1542565668220" duration="2688000" />
+      <workItem from="1542565668220" duration="2802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19720000" />
+    <option name="totallyTimeSpent" value="19834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -605,8 +605,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/post.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="39" column="51" selection-start-line="39" selection-start-column="51" selection-end-line="39" selection-end-column="51" />
+        <state relative-caret-position="398">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="48" selection-end-column="44" />
         </state>
       </provider>
     </entry>
