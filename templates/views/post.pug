@@ -39,10 +39,12 @@ block content
 			"image": [
 				"#{data.post._.image.fit(750,450)}"
 			],
-			"datePublished": "#{data.post._.publishedDate.format('MMMM Do, YYYY')}",
+			"datePublished": "#{data.post._.publishedDate.format('DD-MM-YYYY')}",
+			"dateModified": "#{data.post._.publishedDate.format('DD-MM-YYYY')}",
 			"author": {
 				"@type": "Person",
-				"name": "#{data.post.author.name.first}"
+				"name": "#{data.post.author.name.first}",
+				"logo": ""
 			},
 			"publisher": {
 				"@type": "Organization",
