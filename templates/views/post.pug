@@ -27,3 +27,25 @@ block content
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
+	script(type='application/ld+json').
+		{
+			"@context": "http://schema.org",
+			"@type": "NewsArticle",
+			"mainEntityOfPage": {
+				"@type": "WebPage",
+				"@id": "https://google.com/article"
+			},
+			"headline": "#{data.post.title}",
+			"image": [
+				#{data.post._.image.fit(750,450)}
+			],
+			"datePublished": "#{data.post._.publishedDate.format('MMMM Do, YYYY')}",
+			"author": {
+				"@type": "Person",
+				"name": "#{data.post.author.name.first}"
+			},
+			"publisher": {
+			"@type": "Organization",
+			"name": "DiabloImmorta.es",
+			"description": "#{data.post.content.brief}"
+		}

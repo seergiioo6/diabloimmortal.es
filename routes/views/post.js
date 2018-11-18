@@ -10,6 +10,8 @@ exports = module.exports = function (req, res) {
 	locals.filters = {
 		post: req.params.post,
 	};
+	locals.title = '';
+	locals.description = '';
 	locals.data = {
 		posts: [],
 	};
@@ -24,6 +26,9 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
+			locals.title = result.title;
+			locals.description = result.content.brief;
+			console.log(locals.description)
 			next(err);
 		});
 

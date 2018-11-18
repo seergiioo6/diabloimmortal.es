@@ -1,15 +1,18 @@
 include ../mixins/flash-messages
 
 doctype html
-html
+html(lang="es")
 
 	//- HTML HEADER
 	head
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-
 		title= title || 'Diablo Immortal'
+		-var meta_description = description || "DiabloImmortal.es es tu sitio web sobre Diablo Immortal, toda la información sobre el videojuego, noticias, guías y más.";
+		meta(property="og:title" content=title || 'Diablo Immortal')
+		meta(property="og:description" content=meta_description)
+		meta(name="description" content=meta_description)
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
