@@ -6272,7 +6272,7 @@ div.dataTables_wrapper div.dataTables_length select {
 	line-height: 30px;
 	color: #4a4a4a;
 }
-.post > p {
+.post > p, ul {
 	font-size: 17px;
 }
 
