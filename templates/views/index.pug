@@ -19,7 +19,7 @@ mixin post(post)
 							else
 								|
 		.post-thumbnail
-			img(src=post._.image.fit(750, 450))
+			img(src=post._.image.fit(750, 450) alt=post.title)
 		p!= post.content.brief
 			
 block content

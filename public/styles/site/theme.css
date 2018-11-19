@@ -10671,3 +10671,29 @@ figure {
 		max-width: 300px
 	}
 }
+
+.row-contact {
+	padding: 25px 0;
+}
+
+.row-contact > div {
+	float: none!important;
+}
+
+textarea {
+	border-color: #e2e2e2!important;
+	font-size: 15px!important;
+	box-shadow: none!important;
+}
+
+.form-control:not(textarea) {
+	border-color: #e2e2e2!important;
+	font-size: 15px!important;
+	padding: 0 15px!important;
+	color: #666!important;
+	-webkit-box-shadow: none!important;
+	box-shadow: none!important;
+	font-weight: 300!important;
+	height: 40px!important;
+	line-height: 40px!important;
+}

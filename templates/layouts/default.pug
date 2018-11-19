@@ -77,9 +77,6 @@ html(lang="es")
 			//- The content block should contain the body of your template's content
 			block content
 		
-				
-
-
 		//- FOOTER
 		footer#footer
 			.container
@@ -94,10 +91,10 @@ html(lang="es")
 					.col-sm-12.col-md-3
 						h4.footer-title Suscríbete
 						p Suscribete a nuestra newsletter y recibe notificaciones cada vez que subamos contenido.
-						.input-group.m-t-25
-							input.form-control(type="text", placeholder="Email")
+						form(method='post').input-group.m-t-25
+							input.form-control(type="text", placeholder="Email" name="email")
 							span.input-group-btn
-								button.btn.btn-primary(type="button") Subscríbete
+								button.btn.btn-primary(type="submit") Subscríbete
 				.footer-bottom
 					.footer-social
 						a(href="#", target="_blank", data-toggle="tooltip", title="facebook")
