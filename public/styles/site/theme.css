@@ -6269,7 +6269,11 @@ div.dataTables_wrapper div.dataTables_length select {
 	margin-bottom: 30px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #ececec;
-	font-size: 15px
+	line-height: 30px;
+	color: #4a4a4a;
+}
+.post > p {
+	font-size: 17px;
 }
 
 .post::after {
