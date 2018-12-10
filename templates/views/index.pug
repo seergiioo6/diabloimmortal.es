@@ -32,7 +32,7 @@ block content
 					| Mantente al día de las últimas noticias y guias del videojuego Diablo Immortal
 	section.toolbar.toolbar-links(data-fixed="true")
 		.container
-			h5.m-r-30 Total artículos (#{data.posts.results.length})
+			h5.m-r-30 Mostrando #{data.posts.results.length} artículos
 			ul.toolbar-nav.hidden-sm-down
 				each cat in data.categories
 					li(class=filters.category === cat.key ? 'active' : false)
