@@ -45,7 +45,6 @@ block content
 				.col-lg-8
 					each post in data.posts.results
 						+post(post)
-					
 				.col-lg-4
 						.widget.widget-newsletter
 							.widget-block(style="background-image: url('images/widget-newsletter.jpg')")
@@ -55,3 +54,17 @@ block content
 									.form-group.input-icon-right
 										input.form-control(type="email", placeholder="Email...")
 									button.btn.btn-primary.btn-block(type="submit") Suscríbete
+			.row
+				if data.posts.totalPages > 1
+					ul.pagination
+						if data.posts.previous
+							li: a(href='?pagina=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
+						else
+							li.disabled: a(href='?pagina=' + 1): span.glyphicon.glyphicon-chevron-left
+						each p, i in data.posts.pages
+							li(class=data.posts.currentPage == p ? 'active' : null)
+								a(href='?pagina=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p))= p
+						if data.posts.next
+							li: a(href='?pagina=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
+						else
+							li.disabled: a(href='?pagina=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
