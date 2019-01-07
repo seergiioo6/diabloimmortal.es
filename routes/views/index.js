@@ -70,10 +70,13 @@ exports = module.exports = function (req, res) {
 			.populate('author categories');
 
 		if (locals.data.category) {
+			console.log('IFF')
 			q.where('categories').in([locals.data.category]);
 		}
 
 		q.exec(function (err, results) {
+			console.log(locals.data.category);
+			console.log(results);
 			locals.data.posts = results;
 			next(err);
 		});
