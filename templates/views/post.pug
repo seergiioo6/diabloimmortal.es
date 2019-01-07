@@ -10,14 +10,16 @@ block content
 			else
 				header
 					h1= data.post.title
-					h5 Publicado 
+					.breadcrumb-post-title
+						a(href='/') Inicio 
+						| / 
+						a(href='/' + data.post.categories[0].key)
+							h2.post-category-title= data.post.categories[0].name + " Diablo Immortal" 
+					h5.post-by Publicado 
 						if data.post.publishedDate
 							| el #{data.post._.publishedDate.format('MMMM Do, YYYY')} 
 						if data.post.author
 							| por #{data.post.author.name.first}
-					a(href='/' + data.post.categories[0].key)
-						h2.post-category-title= data.post.categories[0].name + " Diablo Immortal"
-						
 				.post
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450) alt=data.post.title).img-responsive

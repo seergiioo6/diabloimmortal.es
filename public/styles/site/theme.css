@@ -10704,5 +10704,22 @@ textarea {
 
 .post-category-title {
 	font-size: 14px;
+	margin-top: 3px;
+}
+
+.breadcrumb-post-title {
+	display: inline-flex;
+}
+
+.breadcrumb-post-title > a:first-child {
+	margin-right: 2px;
+}
+
+.breadcrumb-post-title > a:last-child {
+	margin-left: 2px;
+}
+
+.post-by {
 	margin-top: -5px;
+	margin-bottom: 15px;
 }
