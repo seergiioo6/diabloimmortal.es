@@ -32,7 +32,11 @@ html(lang="es")
 				googletag.pubads().enableSingleRequest();
 				googletag.enableServices();
 			});
-
+			googletag.cmd.push(function () {
+				googletag.defineSlot('/411999047/300x1050_Diabloimmortal', [300, 1050], 'div-gpt-ad-1548773626429-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
 
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
