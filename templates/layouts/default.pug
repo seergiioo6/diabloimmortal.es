@@ -22,6 +22,17 @@ html(lang="es")
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'UA-47090382-2');
+		script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
+		script.
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+		script.
+			googletag.cmd.push(function () {
+				googletag.defineSlot('/411999047/300x250_DiabloImmortal', [300, 250], 'div-gpt-ad-1548765824558-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
+
 
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
@@ -90,12 +101,11 @@ html(lang="es")
 						p ¿Te gusta escribir contenido y eres un apasionado de los videojuegos? Ponte en contacto con nostros a traves de 
 							a(href="/contacto") este enlace.
 					.col-sm-12.col-md-3
-						h4.footer-title Suscríbete
-						p Suscribete a nuestra newsletter y recibe notificaciones cada vez que subamos contenido.
-						form(method='post').input-group.m-t-25
-							input.form-control(type="text", placeholder="Email" name="email")
-							span.input-group-btn
-								button.btn.btn-primary(type="submit") Subscríbete
+						#div-gpt-ad-1548765824558-0(style='height:250px; width:300px;')
+							script.
+								googletag.cmd.push(function () {
+									googletag.display('div-gpt-ad-1548765824558-0');
+								});
 				.footer-bottom
 					.footer-social
 						a(href="#", target="_blank", data-toggle="tooltip", title="facebook")
