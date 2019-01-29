@@ -46,14 +46,11 @@ block content
 					each post in data.posts.results
 						+post(post)
 				.col-lg-4
-						.widget.widget-newsletter
-							.widget-block(style="background-image: url('images/widget-newsletter.jpg')")
-								.overlay
-								form
-									p Recibe notificaciones cada vez que subamos un nuevo artículo
-									.form-group.input-icon-right
-										input.form-control(type="email", placeholder="Email...")
-									button.btn.btn-primary.btn-block(type="submit") Suscríbete
+					#div-gpt-ad-1548765824558-0(style='height:250px; width:300px;')
+						script.
+							googletag.cmd.push(function () {
+								googletag.display('div-gpt-ad-1548765824558-0');
+							});
 			.row
 				if data.posts.totalPages > 1
 					ul.pagination
