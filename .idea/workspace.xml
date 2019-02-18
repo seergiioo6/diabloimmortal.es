@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/cmp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/default.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/views/index.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="487">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/cmp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="36" selection-start-column="36" selection-end-column="36" />
+            <state relative-caret-position="506">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="249">
+              <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -46,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/styles/site/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5842">
+            <state relative-caret-position="598">
               <caret line="254" column="7" selection-start-line="254" selection-start-column="1" selection-end-line="254" selection-end-column="7" />
             </state>
           </provider>
@@ -63,7 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reciente</find>
       <find>filters</find>
       <find>title</find>
       <find>descrip</find>
@@ -93,6 +93,7 @@
       <find>sus</find>
       <find>suscri</find>
       <find>susc</find>
+      <find>div-gpt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,9 +117,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/templates/views/post.pug" />
         <option value="$PROJECT_DIR$/public/styles/site/theme.css" />
-        <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
-        <option value="$PROJECT_DIR$/templates/views/index.pug" />
         <option value="$PROJECT_DIR$/public/js/cmp.js" />
+        <option value="$PROJECT_DIR$/templates/views/index.pug" />
+        <option value="$PROJECT_DIR$/templates/layouts/default.pug" />
       </list>
     </option>
   </component>
@@ -140,17 +141,6 @@
             <path>
               <item name="diabloimmortal.es" type="b2602c69:ProjectViewProjectNode" />
               <item name="diabloimmortal.es" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diabloimmortal.es" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diabloimmortal.es" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diabloimmortal.es" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diabloimmortal.es" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="diabloimmortal.es" type="b2602c69:ProjectViewProjectNode" />
@@ -232,12 +222,13 @@
       <workItem from="1548851457934" duration="4000" />
       <workItem from="1548858881183" duration="14000" />
       <workItem from="1548863294930" duration="52000" />
-      <workItem from="1549391739398" duration="41000" />
+      <workItem from="1549391739398" duration="713000" />
+      <workItem from="1550490355691" duration="182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40529000" />
+    <option name="totallyTimeSpent" value="41383000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -396,31 +387,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
+    <entry file="file://$PROJECT_DIR$/public/js/cmp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="506">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="249">
+          <caret line="52" column="31" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/styles/site/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5842">
+        <state relative-caret-position="598">
           <caret line="254" column="7" selection-start-line="254" selection-start-column="1" selection-end-line="254" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/cmp.js">
+    <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        <state relative-caret-position="487">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
