@@ -25,68 +25,63 @@ html(lang="es")
 			gtag('config', 'UA-47090382-2');
 		script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
 		script.
-			setTimeout(function () {
-				var div_1_sizes = [
-					[300, 250],
-					[300, 600]
-				];
-				var PREBID_TIMEOUT = 1000;
-				var FAILSAFE_TIMEOUT = 3000;
-				var placement = 'diabloimmortal_prebid'
-				var adUnits = [
-					{
-						code: placement,
-						mediaTypes: {
-							banner: {
-								sizes: div_1_sizes
-							}
-						},
-						bids: [{
-							bidder: 'adpone',
-							params: {
-								placementId: 1234
-							}
-						}]
+			var div_1_sizes = [
+				[300, 250]
+			];
+			var PREBID_TIMEOUT = 1000;
+			var FAILSAFE_TIMEOUT = 3000;
+			var placement = 'diabloimmortal_prebid'
+			var adUnits = [
+				{
+					code: placement,
+					mediaTypes: {
+						banner: {
+							sizes: div_1_sizes
+						}
 					},
-				];
-				// ======== DO NOT EDIT BELOW THIS LINE =========== //
-				var googletag = googletag || {};
-				googletag.cmd = googletag.cmd || [];
-				googletag.cmd.push(function () {
-					googletag.pubads().disableInitialLoad();
+					bids: [{
+						bidder: 'adpone',
+						params: {
+							placementId: 1234
+						}
+					}]
+				},
+			];
+			// ======== DO NOT EDIT BELOW THIS LINE =========== //
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			googletag.cmd.push(function () {
+				googletag.pubads().disableInitialLoad();
+			});
+			var pbjs = pbjs || {};
+			pbjs.que = pbjs.que || [];
+			pbjs.que.push(function () {
+				pbjs.addAdUnits(adUnits);
+				pbjs.requestBids({
+					bidsBackHandler: initAdserver,
+					timeout: PREBID_TIMEOUT
 				});
-				var pbjs = pbjs || {};
-				pbjs.que = pbjs.que || [];
-				pbjs.que.push(function () {
-					pbjs.addAdUnits(adUnits);
-					pbjs.requestBids({
-						bidsBackHandler: initAdserver,
-						timeout: PREBID_TIMEOUT
+			});
+			function initAdserver() {
+				
+				if (pbjs.initAdserverSet) return;
+				pbjs.initAdserverSet = true;
+				googletag.cmd.push(function () {
+					pbjs.que.push(function () {
+						pbjs.setTargetingForGPTAsync();
+						googletag.pubads().refresh();
 					});
 				});
-
-				function initAdserver() {
-					if (pbjs.initAdserverSet) return;
-					pbjs.initAdserverSet = true;
-					googletag.cmd.push(function () {
-						pbjs.que.push(function () {
-							pbjs.setTargetingForGPTAsync();
-							googletag.pubads().refresh();
-						});
-					});
-				}
-
-				// in case PBJS doesn't load
-				setTimeout(function () {
-					initAdserver();
-				}, FAILSAFE_TIMEOUT);
-				googletag.cmd.push(function () {
-					googletag.defineSlot(placement, div_1_sizes, 'div-gpt-ad-1554198712659-0').addService(googletag.pubads());
-					googletag.pubads().enableSingleRequest();
-					googletag.enableServices();
-				});
-			}, 2000);
-
+			}
+			// in case PBJS doesn't load
+			setTimeout(function () {
+				initAdserver();
+			}, FAILSAFE_TIMEOUT);
+			googletag.cmd.push(function () {
+				googletag.defineSlot(placement, div_1_sizes, 'div-gpt-ad-1554198712659-0').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.enableServices();
+			});
 
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
