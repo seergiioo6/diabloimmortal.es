@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="" />
+    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/templates/layouts/default.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+            <state relative-caret-position="368">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
             </state>
           </provider>
         </entry>
@@ -42,8 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
-      <find>post</find>
       <find>require</find>
       <find>enquiryTypes</find>
       <find>contact</find>
@@ -72,6 +72,8 @@
       <find>googletag</find>
       <find>div-gpt-ad-1554198712659-0</find>
       <find>1554198712659</find>
+      <find>prebid</find>
+      <find>prebid.js</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,12 +216,12 @@
       <workItem from="1548863294930" duration="52000" />
       <workItem from="1549391739398" duration="713000" />
       <workItem from="1550490355691" duration="847000" />
-      <workItem from="1554198287290" duration="3407000" />
+      <workItem from="1554198287290" duration="3844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45455000" />
+    <option name="totallyTimeSpent" value="45892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -411,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+        <state relative-caret-position="368">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
         </state>
       </provider>
     </entry>
