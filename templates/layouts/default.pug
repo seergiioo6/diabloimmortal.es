@@ -83,6 +83,15 @@ html(lang="es")
 				googletag.pubads().enableSingleRequest();
 				googletag.enableServices();
 			});
+			pbjs.que.push(function () {
+				pbjs.enableAnalytics([{
+					provider: 'adpone',
+					options: {
+					account: 'ABC-ACCOUNT-ID',
+					url: 'https://rtb.adpone.com/prebid/analytics'
+					}
+				}])
+			})
 
 		if user && user.canAccessKeystone
 			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")

@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+            <state relative-caret-position="299">
+              <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -115,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,6 +154,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,11 +222,12 @@
       <workItem from="1554739637584" duration="153000" />
       <workItem from="1554741730709" duration="512000" />
       <workItem from="1554801944367" duration="18000" />
+      <workItem from="1554994151933" duration="910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49608000" />
+    <option name="totallyTimeSpent" value="50518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -410,8 +411,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        <state relative-caret-position="299">
+          <caret line="44" column="56" selection-start-line="44" selection-start-column="56" selection-end-line="44" selection-end-column="56" />
         </state>
       </provider>
     </entry>
