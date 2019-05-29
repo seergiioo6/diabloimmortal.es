@@ -2,6 +2,8 @@ var keystone = require('keystone');
 var async = require('async');
 
 exports = module.exports = function (req, res) {
+	
+	console.log("req.headers: ", req.headers);
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
