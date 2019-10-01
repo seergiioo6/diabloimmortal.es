@@ -16,71 +16,43 @@ html(lang="es")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		link(href="/styles/site.min.css", rel="stylesheet")
-		script(async, src='/js/prebid2.15.0.js')
+		script(async, src='https://adpnlib.s3-eu-west-1.amazonaws.com/prebidvideo.js')
 		script(async, src='https://www.googletagmanager.com/gtag/js?id=UA-47090382-2')
 		script.
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 			gtag('config', 'UA-47090382-2');
+		
 		script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
 		script.
-			var div_1_sizes = [
-				[300, 250]
-			];
-			var PREBID_TIMEOUT = 1000;
-			var FAILSAFE_TIMEOUT = 3000;
-			var placement = '/1325696/300x250-prebid-diablo'
-			var adUnits = [
-				{
-					code: placement,
-					mediaTypes: {
-						banner: {
-							sizes: div_1_sizes
-						}
-					},
-					bids: [{
-						bidder: 'adpone',
-						params: {
-							placementId: 119311124840911
-						}
-					}]
+			var adpnPbjs = adpnPbjs || {};
+			adpnPbjs.que = adpnPbjs.que || [];
+			var adUnits = [{
+				code: 'video1',
+				mediaTypes: {
+					video: {
+						playerSize: [640, 480],
+						context: 'outstream'
+					}
 				},
-			];
-			// ======== DO NOT EDIT BELOW THIS LINE =========== //
-			var googletag = googletag || {};
-			googletag.cmd = googletag.cmd || [];
-			googletag.cmd.push(function () {
-				googletag.pubads().disableInitialLoad();
-			});
-			var pbjs = pbjs || {};
-			pbjs.que = pbjs.que || [];
-			pbjs.que.push(function () {
-				pbjs.addAdUnits(adUnits);
-				pbjs.requestBids({
-					bidsBackHandler: initAdserver,
-					timeout: PREBID_TIMEOUT
+				bids: [{
+					bidder: 'criteo',
+					params: {
+						zoneId: 1455580
+					}
+				}]
+			}]
+			adpnPbjs.que.push(function () {
+				adpnPbjs.addAdUnits(adUnits);
+				adpnPbjs.requestBids({
+					timeout: 1000,
+					bidsBackHandler: function (bids) {
+						console.log(bids)
+						var highestCpmBids = adpnPbjs.getHighestCpmBids('video1');
+						adpnPbjs.renderAd(document, highestCpmBids[0].adId);
+					}
 				});
-			});
-			function initAdserver() {
-				
-				if (pbjs.initAdserverSet) return;
-				pbjs.initAdserverSet = true;
-				googletag.cmd.push(function () {
-					pbjs.que.push(function () {
-						pbjs.setTargetingForGPTAsync();
-						googletag.pubads().refresh();
-					});
-				});
-			}
-			// in case PBJS doesn't load
-			setTimeout(function () {
-				initAdserver();
-			}, FAILSAFE_TIMEOUT);
-			googletag.cmd.push(function () {
-				googletag.defineSlot(placement, div_1_sizes, 'div-gpt-ad-1554198712659-0').addService(googletag.pubads());
-				googletag.pubads().enableSingleRequest();
-				googletag.enableServices();
 			});
 
 		if user && user.canAccessKeystone
