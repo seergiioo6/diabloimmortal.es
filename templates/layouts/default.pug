@@ -46,7 +46,7 @@ html(lang="es")
 			adpnPbjs.que.push(function () {
 				adpnPbjs.addAdUnits(adUnits);
 				adpnPbjs.requestBids({
-					timeout: 1000,
+					timeout: 3000,
 					bidsBackHandler: function (bids) {
 						console.log(bids)
 						var highestCpmBids = adpnPbjs.getHighestCpmBids('video1');
