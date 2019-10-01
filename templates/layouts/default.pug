@@ -39,7 +39,11 @@ html(lang="es")
 				bids: [{
 					bidder: 'criteo',
 					params: {
-						zoneId: 1455580
+						zoneId: 1455580,
+						video: {
+							skip: 0,
+							playbackmethod: 1
+						}
 					}
 				}]
 			}]
@@ -48,7 +52,6 @@ html(lang="es")
 				adpnPbjs.requestBids({
 					timeout: 3000,
 					bidsBackHandler: function (bids) {
-						console.log(bids)
 						var highestCpmBids = adpnPbjs.getHighestCpmBids('video1');
 						adpnPbjs.renderAd(document, highestCpmBids[0].adId);
 					}

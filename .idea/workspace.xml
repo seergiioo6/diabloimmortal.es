@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/views/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/default.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="370">
+              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -88,7 +86,6 @@
       <find>cmp</find>
       <find>/hs</find>
       <find>/js</find>
-      <find>googletag</find>
       <find>1554198712659</find>
       <find>prebid.js</find>
       <find>defines</find>
@@ -103,6 +100,7 @@
       <find>div-gpt-ad-1554198712659-0</find>
       <find>req.</find>
       <find>prebid</find>
+      <find>googletag</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,10 +132,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="71" />
-    <option name="y" value="172" />
-    <option name="width" value="1291" />
-    <option name="height" value="704" />
+    <option name="x" value="-5" />
+    <option name="y" value="-5" />
+    <option name="width" value="575" />
+    <option name="height" value="309" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -242,12 +240,12 @@
       <workItem from="1557918252749" duration="1150000" />
       <workItem from="1557929086410" duration="10000" />
       <workItem from="1559120977679" duration="739000" />
-      <workItem from="1569920325407" duration="141000" />
+      <workItem from="1569920325407" duration="1459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53353000" />
+    <option name="totallyTimeSpent" value="54671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -440,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="370">
+          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
         </state>
       </provider>
     </entry>
