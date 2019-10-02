@@ -17,30 +17,33 @@ head
 	script.
 		var pbjs = pbjs || {};
 		pbjs.que = pbjs.que || [];
-		var adUnits = [{
-			code: 'video1',
-			mediaTypes: {
-				video: {
-					playerSize: [640, 480],
-					context: 'outstream',
-					mimes: ["video/mp4"],
-					maxduration: 30,
-					api: [1, 2],
-					protocols: [2, 3]
-				}
-			},
-			bids: [{
-				bidder: 'criteo',
-				params: {
-					zoneId: 1455580,
+		var adUnits = [
+			{
+				code: 'video1',
+				mediaTypes: {
 					video: {
-						skip: 0,
-						playbackmethod: 1,
-						placement: 1
-					},
-				}
-			}]
-		}];
+						playerSize: [640, 480],
+						context: 'instream',
+						mimes: ['video/mp4', 'video/x-flv'],
+						maxduration: 30,
+						api: [1, 2],
+						protocols: [2, 3],
+					}
+				},
+				bids: [{
+					bidder: 'criteo',
+					params: {
+						zoneid: '32572',
+						video: {
+							skip: 1,
+							minduration: 5,
+							startdelay: 5,
+							playbackmethod: 1,
+							placement: 2
+						}
+					}
+				}]
+			}];
 		pbjs.que.push(function () {
 			pbjs.addAdUnits(adUnits);
 			pbjs.requestBids({
