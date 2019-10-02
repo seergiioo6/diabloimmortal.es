@@ -1,69 +1,70 @@
 include ../mixins/flash-messages
 
+head
+	meta(charset="utf-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	title= title || 'Diablo Immortal'
+	-var meta_description = description || "DiabloImmortal.es es tu sitio web sobre Diablo Immortal, toda la información sobre el videojuego, noticias, guías y más.";
+	meta(property="og:title" content=title || 'Diablo Immortal')
+	meta(property="og:description" content=meta_description)
+	meta(name="description" content=meta_description)
+	link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+	link(href="/styles/site.min.css", rel="stylesheet")
+	script(async, src='https://static.criteo.net/js/ld/publishertag.js')
+	script(async='async', src='/js/prebid-criteo.js')
+	script.
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-47090382-2');
+
+	script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
+	script.
+		var pbjs = pbjs || {};
+		pbjs.que = pbjs.que || [];
+		var adUnits = [{
+			code: 'video1',
+			mediaTypes: {
+				video: {
+					playerSize: [640, 480],
+					context: 'outstream'
+				}
+			},
+			bids: [{
+				bidder: 'criteo',
+				params: {
+					zoneId: 1455580,
+					video: {
+						skip: 0,
+						playbackmethod: 1
+					}
+				}
+			}]
+		}]
+		pbjs.que.push(function () {
+			pbjs.addAdUnits(adUnits);
+			pbjs.requestBids({
+				timeout: 3000,
+				bidsBackHandler: function (bids) {
+					var highestCpmBids = pbjs.getHighestCpmBids('video1');
+					pbjs.renderAd(document, highestCpmBids[0].adId);
+				}
+			});
+		});
+
+	if user && user.canAccessKeystone
+		link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+	block css
+
+	block head
 doctype html
+
 html(lang="es")
 
 	//- HTML HEADER
-	head
-		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		title= title || 'Diablo Immortal'
-		-var meta_description = description || "DiabloImmortal.es es tu sitio web sobre Diablo Immortal, toda la información sobre el videojuego, noticias, guías y más.";
-		meta(property="og:title" content=title || 'Diablo Immortal')
-		meta(property="og:description" content=meta_description)
-		meta(name="description" content=meta_description)
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
-
-		link(href="/styles/site.min.css", rel="stylesheet")
-		script(async, src='https://static.criteo.net/js/ld/publishertag.js')
-		script.
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-47090382-2');
-		
-		script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
-		script.
-			var pbjs = pbjs || {};
-			pbjs.que = pbjs.que || [];
-			var adUnits = [{
-				code: 'video1',
-				mediaTypes: {
-					video: {
-						playerSize: [640, 480],
-						context: 'outstream'
-					}
-				},
-				bids: [{
-					bidder: 'criteo',
-					params: {
-						zoneId: 1455580,
-						video: {
-							skip: 0,
-							playbackmethod: 1
-						}
-					}
-				}]
-			}]
-			pbjs.que.push(function () {
-				pbjs.addAdUnits(adUnits);
-				pbjs.requestBids({
-					timeout: 3000,
-					bidsBackHandler: function (bids) {
-						var highestCpmBids = pbjs.getHighestCpmBids('video1');
-						pbjs.renderAd(document, highestCpmBids[0].adId);
-					}
-				});
-			});
-
-		if user && user.canAccessKeystone
-			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
-
-		block css
-
-		block head
-
 	//- HTML BODY
 	body
 
