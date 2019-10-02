@@ -23,10 +23,10 @@ head
 				video: {
 					playerSize: [640, 480],
 					context: 'outstream',
-					mimes: ['video/mp4', 'video/x-flv'],
+					mimes: ["video/mp4"],
 					maxduration: 30,
 					api: [1, 2],
-					protocols: [2, 3],
+					protocols: [2, 3]
 				}
 			},
 			bids: [{
@@ -50,7 +50,7 @@ head
 					if (highestCpmBids.length) {
 						pbjs.renderAd(document, highestCpmBids[0].adId);
 					}
-					
+
 				}
 			});
 		});
