@@ -16,7 +16,6 @@ html(lang="es")
 		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 		link(href="/styles/site.min.css", rel="stylesheet")
-		script(async, src='https://adpnlib.s3-eu-west-1.amazonaws.com/prebidvideo.js')
 		script(async, src='https://static.criteo.net/js/ld/publishertag.js')
 		script.
 			window.dataLayer = window.dataLayer || [];
@@ -26,8 +25,8 @@ html(lang="es")
 		
 		script(async='async', src='https://www.googletagservices.com/tag/js/gpt.js')
 		script.
-			var adpnPbjs = adpnPbjs || {};
-			adpnPbjs.que = adpnPbjs.que || [];
+			var pbjs = pbjs || {};
+			pbjs.que = pbjs.que || [];
 			var adUnits = [{
 				code: 'video1',
 				mediaTypes: {
@@ -47,13 +46,13 @@ html(lang="es")
 					}
 				}]
 			}]
-			adpnPbjs.que.push(function () {
-				adpnPbjs.addAdUnits(adUnits);
-				adpnPbjs.requestBids({
+			pbjs.que.push(function () {
+				pbjs.addAdUnits(adUnits);
+				pbjs.requestBids({
 					timeout: 3000,
 					bidsBackHandler: function (bids) {
-						var highestCpmBids = adpnPbjs.getHighestCpmBids('video1');
-						adpnPbjs.renderAd(document, highestCpmBids[0].adId);
+						var highestCpmBids = pbjs.getHighestCpmBids('video1');
+						pbjs.renderAd(document, highestCpmBids[0].adId);
 					}
 				});
 			});
