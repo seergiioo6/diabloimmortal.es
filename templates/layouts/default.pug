@@ -22,7 +22,11 @@ head
 			mediaTypes: {
 				video: {
 					playerSize: [640, 480],
-					context: 'outstream'
+					context: 'outstream',
+					mimes: ['video/mp4', 'video/x-flv'],
+					maxduration: 30,
+					api: [1, 2],
+					protocols: [2, 3],
 				}
 			},
 			bids: [{
