@@ -38,7 +38,10 @@ head
 				timeout: 3000,
 				bidsBackHandler: function (bids) {
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
-					pbjs.renderAd(document, highestCpmBids[0].adId);
+					if (highestCpmBids.length) {
+						pbjs.renderAd(document, highestCpmBids[0].adId);
+					}
+					
 				}
 			});
 		});
