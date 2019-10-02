@@ -28,14 +28,10 @@ head
 			bids: [{
 				bidder: 'criteo',
 				params: {
-					zoneId: 1455580,
-					video: {
-						skip: 0,
-						playbackmethod: 1
-					}
+					zoneId: 1455580
 				}
 			}]
-		}]
+		}];
 		pbjs.que.push(function () {
 			pbjs.addAdUnits(adUnits);
 			pbjs.requestBids({
