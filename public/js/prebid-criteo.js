@@ -5305,7 +5305,6 @@ pbjsChunk([0], {
 					return !(!t || !t.params || !t.params.zoneId && !t.params.networkId) && !(hasVideoMediaType(t) && !hasValidVideoMediaType(t))
 				},
 				buildRequests: function(t, e) {
-					console.log("buildRequests");
 					var i, r;
 					if (_extends(e, {
 						ceh: __WEBPACK_IMPORTED_MODULE_2__src_config__.b.getConfig("criteo.ceh")
