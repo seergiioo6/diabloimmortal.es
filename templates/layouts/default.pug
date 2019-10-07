@@ -69,7 +69,7 @@ head
 					console.log("bidsBackHandler")
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
 					var elementExists = document.getElementById("playercontainer")
-					var videoUrl = highestCpmBids[0] ? highestCpmBids[0].vastUrl : null;
+					var videoUrl = highestCpmBids[0] ? highestCpmBids[0].vastUrl : "";
 					invokeVideoPlayer(videoUrl);
 				}
 			});
