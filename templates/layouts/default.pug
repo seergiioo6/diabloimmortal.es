@@ -124,6 +124,7 @@ html(lang="es")
 					});
 
 					jwPlayerInstance.on('beforePlay', function () {
+						console.log("beforePlay")
 						jwPlayerInstance.playAd(url);
 					})
 				}
