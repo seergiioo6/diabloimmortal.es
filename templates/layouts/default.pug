@@ -52,20 +52,12 @@ head
 			pbjs.addAdUnits(adUnits[0]); // add your ad units to the bid request
 			pbjs.requestBids({
 				bidsBackHandler: function (bids) {
-					console.log("got some bids");
-					console.log(bids);
-					var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
-						adUnit: adUnits[0],
-						params: {
-							iu: '/19968336/prebid_cache_video_adunit',
-							cust_params: {
-								section: 'blog',
-								anotherKey: 'anotherValue'
-							},
-							output: 'vast'
-						}
-					});
-					invokeVideoPlayer(videoUrl);
+					var highestCpmBids = pbjs.getHighestCpmBids('video1');
+					if (highestCpmBids.length) {
+						invokeVideoPlayer(highestCpmBids[0].vastUrl);
+					} else {
+						invokeVideoPlayer();
+					}
 				}
 			});
 		});
