@@ -18,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+            <state relative-caret-position="275">
+              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -279,12 +279,12 @@
       <workItem from="1570026783567" duration="1728000" />
       <workItem from="1570029989240" duration="2437000" />
       <workItem from="1570111852933" duration="1875000" />
-      <workItem from="1570437858551" duration="5463000" />
+      <workItem from="1570437858551" duration="5510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66595000" />
+    <option name="totallyTimeSpent" value="66642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -507,8 +507,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+        <state relative-caret-position="275">
+          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
         </state>
       </provider>
     </entry>

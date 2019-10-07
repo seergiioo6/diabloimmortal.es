@@ -66,6 +66,7 @@ head
 			pbjs.requestBids({
 				timeout: 5000,
 				bidsBackHandler: function (bids) {
+					console.log("bidsBackHandler")
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
 					var elementExists = document.getElementById("playercontainer")
 					var videoUrl = highestCpmBids[0] ? highestCpmBids[0].vastUrl : null;
