@@ -12,6 +12,7 @@ head
 	link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
 
 	link(href="/styles/site.min.css", rel="stylesheet")
+	link(href="/styles/videojs.ima3.min.css", rel="stylesheet")
 	script(src='/js/prebid-criteo.js')
 
 	script.
@@ -45,14 +46,31 @@ head
 
 		pbjs.que.push(function () {
 			pbjs.addAdUnits(adUnits);
+			// pbjs.requestBids({
+			// 	timeout: 3000,
+			// 	bidsBackHandler: function (bids) {
+			// 		var highestCpmBids = pbjs.getHighestCpmBids('video1');
+			// 		if (highestCpmBids.length) {
+			// 			pbjs.renderAd(document, highestCpmBids[0].adId);
+			// 		}
+			//
+			// 	}
+			// });
 			pbjs.requestBids({
-				timeout: 3000,
 				bidsBackHandler: function (bids) {
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
-					if (highestCpmBids.length) {
-						pbjs.renderAd(document, highestCpmBids[0].adId);
-					}
-
+					var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
+						adUnit: adUnits[0],
+						params: {
+							iu: '/19968336/prebid_cache_video_adunit',
+							cust_params: {
+								section: 'blog',
+								anotherKey: 'anotherValue'
+							},
+							output: 'vast'
+						}
+					});
+					invokeVideoPlayer(videoUrl);
 				}
 			});
 		});
