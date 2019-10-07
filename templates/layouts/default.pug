@@ -68,11 +68,8 @@ head
 				bidsBackHandler: function (bids) {
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
 					var elementExists = document.getElementById("playercontainer")
-					if (highestCpmBids.length) {
-						var videoUrl = highestCpmBids[0].vastUrl;
-						console.log(videoUrl)
-						invokeVideoPlayer(videoUrl);
-					}
+					var videoUrl = highestCpmBids[0] ? highestCpmBids[0].vastUrl : null;
+					invokeVideoPlayer(videoUrl);
 				}
 			});
 		});
@@ -90,10 +87,13 @@ head
 					client: "vast",
 				}
 			});
-
-			jwPlayerInstance.on('beforePlay', function() {
-				jwPlayerInstance.playAd(url);
-			})
+			
+			if (url) {
+				jwPlayerInstance.on('beforePlay', function () {
+					jwPlayerInstance.playAd(url);
+				})
+			}
+			
 		}
 
 		if (tempTag) {
