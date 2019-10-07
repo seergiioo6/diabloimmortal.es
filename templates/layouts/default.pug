@@ -68,7 +68,7 @@ head
 				bidsBackHandler: function (bids) {
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
 					var elementExists = document.getElementById("playercontainer")
-					if (highestCpmBids.length && elementExists) {
+					if (highestCpmBids.length) {
 						var videoUrl = highestCpmBids[0].vastUrl;
 						console.log(videoUrl)
 						invokeVideoPlayer(videoUrl);
