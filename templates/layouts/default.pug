@@ -76,7 +76,7 @@ html(lang="es")
 	//- HTML HEADER
 	//- HTML BODY
 	body
-
+		
 		//- HEADER
 		header#header
 			.container
@@ -106,7 +106,32 @@ html(lang="es")
 											i.fa.fa-sign-out
 		//- BODY
 		#body
+			#playercontainer(style="width: 640px; height: 480px; border: 1px solid black;")
+			script.
+				var jwPlayerInstance = jwplayer("playerContainerJW");
 
+				invokeVideoPlayer = function (url) {
+					console.log("starting player with url " + url);
+					jwPlayerInstance.setup({
+						"file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
+						"width": 640,
+						"height": 480,
+						"autostart": true,
+						"mute": true,
+						"advertising": {
+							client: "vast",
+						}
+					});
+
+					jwPlayerInstance.on('beforePlay', function () {
+						jwPlayerInstance.playAd(url);
+					})
+				}
+
+				if (tempTag) {
+					invokeVideoPlayer(tempTag);
+					tempTag = false;
+				}
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
 			//- Remember to include it in your templates when you override the intro and content blocks!
