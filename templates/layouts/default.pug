@@ -13,7 +13,7 @@ head
 
 	link(href="/styles/site.min.css", rel="stylesheet")
 	script(src='/js/prebid-criteo.js')
-
+	script(src='http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.js')
 	script.
 		jwplayer.key = "APGCk6oE"; //Test Key - replace this with your own valid JWPlayer license key
 		var pbjs = pbjs || {};
@@ -71,7 +71,7 @@ head
 				}
 			});
 		});
-	script(src='http://ssl.p.jwpcdn.com/player/v/7.2.4/jwplayer.js')
+	
 	script(type='text/JavaScript').
 		var jwPlayerInstance = jwplayer("playerContainerJW");
 		invokeVideoPlayer = function(url) {
