@@ -15,93 +15,62 @@ head
 	script(src='/js/jquery/jquery-1.11.3.min.js')
 	script(src='/js/prebid-criteo.js')
 	script(src='http://ssl.p.jwpcdn.com/player/v/8.0.5/jwplayer.js')
-	script.
-		jwplayer.key = "YEUwUA9wRFeDcydr"; //Test Key - replace this with your own valid JWPlayer license key
+	script(type='text/javascript').
+		jwplayer.key = "F4+phNkFZ4+I3UhfSN6h8JPbxdnsto3caVMq+A=="; //Test Key - replace this with your own valid JWPlayer license key
 	script.
 		var pbjs = pbjs || {};
 		pbjs.que = pbjs.que || [];
+		
 		var tempTag = false;
 		var invokeVideoPlayer = function (url) {
 			tempTag = url;
-		}
-
-		var adUnits = [{
-			code: 'video1',
-			mediaTypes: {
-				video: {
-					playerSize: [640, 480],
-					context: 'instream',
-					mimes: ["video/mp4"],
-					maxduration: 30,
-					api: [1, 2],
-					playerSize: [640, 480],
-					protocols: [2, 3]
-				}
-			},
-			bids: [{
-				bidder: 'criteo',
-				params: {
-					zoneId: 1455580,
-					video: {
-						skip: 0,
-						playbackmethod: 1,
-						placement: 1,
+		};
+		/* Prebid video ad unit */
+		var adUnits = [
+			{
+				code: 'video1',
+				mediaTypes: {},
+				bids: [{
+					bidder: 'criteo',
+					params: {
+						zoneid: '32572',
+						video: {
+							skip: 1,
+							minduration: 5,
+							startdelay: 5,
+							playbackmethod: 1,
+							placement: 2
+						}
 					}
-				}
+				}]
 			}]
-		}]
-
 		pbjs.que.push(function () {
-			pbjs.addAdUnits(adUnits);
-			// pbjs.requestBids({
-			// 	timeout: 3000,
-			// 	bidsBackHandler: function (bids) {
-			// 		var highestCpmBids = pbjs.getHighestCpmBids('video1');
-			// 		if (highestCpmBids.length) {
-			// 			pbjs.renderAd(document, highestCpmBids[0].adId);
-			// 		}
-			//
-			// 	}
-			// });
+			pbjs.setConfig({
+				debug: true,
+				enableSendAllBids: true
+			});
+			pbjs.addAdUnits(adUnits[0]); // add your ad units to the bid request
 			pbjs.requestBids({
-				timeout: 5000,
 				bidsBackHandler: function (bids) {
-					console.log("bidsBackHandler")
-					var highestCpmBids = pbjs.getHighestCpmBids('video1');
-					var elementExists = document.getElementById("playercontainer")
-					var videoUrl = highestCpmBids[0] ? highestCpmBids[0].vastUrl : "";
+					console.log("got some bids");
+					console.log(bids);
+					var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
+						adUnit: adUnits[0],
+						params: {
+							iu: '/19968336/prebid_cache_video_adunit',
+							cust_params: {
+								section: 'blog',
+								anotherKey: 'anotherValue'
+							},
+							output: 'vast'
+						}
+					});
 					invokeVideoPlayer(videoUrl);
 				}
 			});
 		});
-	
-	script.
-		var jwPlayerInstance = jwplayer("playercontainer");
-		invokeVideoPlayer = function(url) {
-			console.log("invokeVideoPlayer", url)
-			jwPlayerInstance.setup({
-				"file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
-				"width": 640,
-				"height": 480,
-				"autostart": true,
-				"mute": true,
-				"advertising": {
-					client: "vast",
-				}
-			});
-			
-			if (url) {
-				jwPlayerInstance.on('beforePlay', function () {
-					jwPlayerInstance.playAd(url);
-				})
-			}
-			
-		}
 
-		if (tempTag) {
-			invokeVideoPlayer(tempTag);
-			tempTag = false;
-		}
+
 	if user && user.canAccessKeystone
 		link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
@@ -142,7 +111,7 @@ html(lang="es")
 											i.fa.fa-edit
 									li.hidden-xs-down
 										a(href="/keystone/signout")
-											i.fa.fa-sign-out 
+											i.fa.fa-sign-out
 		//- BODY
 		#body
 
@@ -159,7 +128,7 @@ html(lang="es")
 
 			//- The content block should contain the body of your template's content
 			block content
-		
+
 		//- FOOTER
 		footer#footer
 			.container
