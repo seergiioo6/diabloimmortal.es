@@ -59,22 +59,41 @@ head
 			pbjs.requestBids({
 				bidsBackHandler: function (bids) {
 					var highestCpmBids = pbjs.getHighestCpmBids('video1');
-					var videoUrl = pbjs.adServers.dfp.buildVideoUrl({
-						adUnit: adUnits[0],
-						params: {
-							iu: '/19968336/prebid_cache_video_adunit',
-							cust_params: {
-								section: 'blog',
-								anotherKey: 'anotherValue'
-							},
-							output: 'vast'
-						}
-					});
+					var videoUrl = highestCpmBids.vastUrl;
+					console.log(videoUrl)
 					invokeVideoPlayer(videoUrl);
 				}
 			});
 		});
-
+	script(src='//players.brightcove.net/5229431809001/rJVmLwTBx_default/index.min.js')
+	script(src='//players.brightcove.net/videojs-ima3/2/videojs.ima3.min.js')
+	script(type='text/JavaScript').
+		function invokeVideoPlayer(url) {
+			bc("myVideo").ima3({
+				serverUrl: url,
+				debug: true,
+				timeout: 5000,
+				ima3SdkSettings: {
+					"disableCustomPlaybackForIOS10Plus": true
+				},
+				adTechOrder: [
+					"html5",
+					"flash"
+				],
+			});
+			videojs("myVideo").ready(function() {
+				var myPlayer = this;
+				myPlayer.catalog.getVideo("5276850149001", function (error, video) {
+					myPlayer.catalog.load(video);
+					if (error) {
+						console.log("There was an error retrieving the media file: " + error);
+					}
+				});
+				myPlayer.on("ima3error", function () {
+					console.log("There was an ima3 error.");
+				});
+			})
+		}
 	if user && user.canAccessKeystone
 		link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 
