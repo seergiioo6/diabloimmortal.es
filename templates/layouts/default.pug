@@ -18,31 +18,12 @@ head
 	script.
 		jwplayer.key = "YEUwUA9wRFeDcydr"; //Test Key - replace this with your own valid JWPlayer license key
 	script.
-		var jwPlayerInstance = jwplayer("playercontainer");
-		invokeVideoPlayer = function (url) {
-			console.log("invokeVideoPlayer", url)
-			jwPlayerInstance.setup({
-				"file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
-				"width": 640,
-				"height": 480,
-				"autostart": true,
-				"mute": true,
-				"advertising": {
-					client: "vast",
-				}
-			});
-
-			if (url) {
-				jwPlayerInstance.on('beforePlay', function () {
-					jwPlayerInstance.playAd(url);
-				})
-			}
-
-		}
-
-	script.
 		var pbjs = pbjs || {};
 		pbjs.que = pbjs.que || [];
+		var tempTag = false;
+		var invokeVideoPlayer = function (url) {
+			tempTag = url;
+		}
 
 		var adUnits = [{
 			code: 'video1',
@@ -94,7 +75,33 @@ head
 			});
 		});
 	
-	
+	script.
+		var jwPlayerInstance = jwplayer("playercontainer");
+		invokeVideoPlayer = function(url) {
+			console.log("invokeVideoPlayer", url)
+			jwPlayerInstance.setup({
+				"file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
+				"width": 640,
+				"height": 480,
+				"autostart": true,
+				"mute": true,
+				"advertising": {
+					client: "vast",
+				}
+			});
+			
+			if (url) {
+				jwPlayerInstance.on('beforePlay', function () {
+					jwPlayerInstance.playAd(url);
+				})
+			}
+			
+		}
+
+		if (tempTag) {
+			invokeVideoPlayer(tempTag);
+			tempTag = false;
+		}
 	if user && user.canAccessKeystone
 		link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
 

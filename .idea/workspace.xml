@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/layouts/default.pug" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/default.pug" afterDir="false" />
-    </list>
+    <list default="true" id="af7d33d6-db72-4ce1-ac97-9a09ba9ada3d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="23">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -89,8 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>prebid.js</find>
-      <find>defines</find>
       <find>prebid/analytics</find>
       <find>analyt</find>
       <find>div-gpt-ad-1554732575503-0</find>
@@ -119,6 +115,8 @@
       <find>invoke</find>
       <find>bidsBackHandler</find>
       <find>var invokeVideoPlayer = function (url) {</find>
+      <find>null</find>
+      <find>setup</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -280,12 +278,12 @@
       <workItem from="1570029989240" duration="2437000" />
       <workItem from="1570111852933" duration="1875000" />
       <workItem from="1570437858551" duration="6143000" />
-      <workItem from="1570447203916" duration="2430000" />
+      <workItem from="1570447203916" duration="2683000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69705000" />
+    <option name="totallyTimeSpent" value="69958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -466,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layouts/default.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="23">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
