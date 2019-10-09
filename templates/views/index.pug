@@ -46,6 +46,31 @@ block content
 					each post in data.posts.results
 						+post(post)
 				.col-lg-4
+					#playercontainer(style="width: 300px; height: 250px; border: 1px solid black;")
+						script.
+							var jwPlayerInstance = jwplayer("playercontainer");
+
+							invokeVideoPlayer = function (url) {
+								jwPlayerInstance.setup({
+									"file": "http://video-demo.appnexus.com/pbjs/JWPlayerDemo/AppNexus_Summit_Video_HighRes.mp4",
+									"width": 300,
+									"height": 250,
+									"autostart": true,
+									"mute": true,
+									"advertising": {
+										client: "vast",
+									}
+								});
+
+								jwPlayerInstance.on('beforePlay', function () {
+									jwPlayerInstance.playAd(url);
+								})
+							}
+
+							if (tempTag) {
+								invokeVideoPlayer(tempTag);
+								tempTag = false;
+							}
 					br
 
 			.row
