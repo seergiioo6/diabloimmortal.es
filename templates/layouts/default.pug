@@ -29,17 +29,25 @@ head
 		var adUnits = [
 			{
 				code: 'video1',
-				mediaTypes: {},
+				mediaTypes: {
+					video: {
+						playerSize: [640, 480],
+						context: 'instream',
+						mimes: ["video/mp4"],
+						maxduration: 30,
+						api: [1, 2],
+						playerSize: [640, 480],
+						protocols: [2, 3]
+					}
+				},
 				bids: [{
 					bidder: 'criteo',
 					params: {
-						zoneid: '32572',
+						zoneId: 1455580,
 						video: {
-							skip: 1,
-							minduration: 5,
-							startdelay: 5,
+							skip: 0,
 							playbackmethod: 1,
-							placement: 2
+							placement: 1,
 						}
 					}
 				}]
